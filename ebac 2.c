@@ -104,41 +104,56 @@ int deletar()
 int main()
 {
     int opcao=0; // definindo variaveis
-    int laco=1;
+    int laco=1;]
+    char senhadigitada[10]="a"
+    int comparacao;
+    printf("### cartorio da EBAC ### \n \n");
+    printf("login de admistrador! \n\ndigite a dua senha: ");
+    printf("%s",senhadigitada);
     
-    for(laco=1;laco=1;)
-   {
-
-    setlocale(LC_ALL, "portuguese");// definindo linguagem 
+    comparacao = strcmp(senhadigitada,"admin");
     
-    printf("### cartorio da EBAC ### \n \n");// inicio do menu 
-    printf("escolha a opçao desejada do menu: \n\n");
-    printf("\t1 - registrar nomes\n");
-    printf("\t2 - consultar nomes\n");
-    printf("\t3 - deletar nomes\n");
-    printf("opçao: ");// fim do menu 
-    scanf("%d" ,&opcao);// armazenamento a escolha do usuario 
-    
-    system("cls");//responsavel por limpar a tela 
-    
-    switch(opcao)// inicio da seleçao do menu 
+    if(comparacao == 0)
     {
-       case 1:
-       registro();//chamada de funçoes 
-       break;
+    
+    
+      for(laco=1;laco=1;)
+         {
+
+         setlocale(LC_ALL, "portuguese");// definindo linguagem 
+    
+         printf("### cartorio da EBAC ### \n \n");// inicio do menu 
+         printf("escolha a opçao desejada do menu: \n\n");
+         printf("\t1 - registrar nomes\n");
+         printf("\t2 - consultar nomes\n");
+         printf("\t3 - deletar nomes\n");
+         printf("opçao: ");// fim do menu 
+         scanf("%d" ,&opcao);// armazenamento a escolha do usuario 
+    
+        system("cls");//responsavel por limpar a tela 
+    
+        switch(opcao)// inicio da seleçao do menu 
+            {
+              case 1:
+              registro();//chamada de funçoes 
+              break;
        
-       case 2:
-       consulta();  
-       break;
+              case 2:
+              consulta();  
+              break;
        
-       case 3:
-       deletar();
-       break;
+              case 3:
+              deletar();
+              break;
        
-       default:
-       printf("essa opcao nao esta disponivel \n");
-       system("pause");
-       break;         
-    } // fim da seleçao
-   }
+              default:
+              printf("essa opcao nao esta disponivel \n");
+              system("pause");
+              break;               
+             } // fim da seleçao
+    }
+   }   
+   
+   else
+       printf("senha incorreta!")
 }    
