@@ -109,7 +109,7 @@ int main()
     int comparacao;
     printf("### cartorio da EBAC ### \n \n");
     printf("login de admistrador! \n\ndigite a dua senha: ");
-    printf("%s",senhadigitada);
+    scanf("%s",senhadigitada);
     
     comparacao = strcmp(senhadigitada,"admin");
     
@@ -161,5 +161,5 @@ int main()
    }   
    
    else
-       printf("senha incorreta!")
+       printf("senha incorreta!");
 }    
